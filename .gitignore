@@ -1,0 +1,4 @@
+# ignorando arquivos .o
+*.o
+# ignorando arquivos .exe
+*.exe
