@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "item.h"
 
 struct item {
@@ -35,5 +36,73 @@ Item* item_criar(){
 void item_excluir(Item *item){
     // libera a memoria do item
     free(item);
+    return;
+}
+
+int item_inserir_dados(Item *item, int codigo, char *nome, float valor){
+    // se o item nao for nulo
+    if(item != NULL){
+        // se o retorno for 0
+        if(!item_inserir_codigo(item, codigo)){
+            printf("Erro: ao inserir codigo do item\n");
+            return 0;
+        }
+        if(!item_inserir_nome(item, nome)){
+            printf("Erro: ao inserir nome do item\n");
+            return 0;
+        }
+        if(!item_inserir_valor(item, valor)){
+            printf("Erro: ao inserir valor do item\n");
+            return 0;
+        }
+        // caso tudo de certo
+        return 1;
+    }
+    return 0;
+}
+
+int item_inserir_codigo(Item *item, int novoCodigo){
+    // tenta inserir o codigo no item
+    if(item != NULL){
+        item->codigo = novoCodigo;
+        return 1;
+    }
+    return 0;
+}
+
+int item_inserir_nome(Item *item, char *novoNome){
+    // tebta inserir o nome no item
+    if(item != NULL){
+        // copia o nome para item
+        strncpy(item->nome, novoNome, sizeof(item->nome)-1);
+        // garantindo que a string termine em \0
+        item->nome[sizeof(item->nome) - 1] = '\0';
+        // retorna
+        return 1;
+    }
+    return 0;
+}
+
+int item_inserir_valor(Item *item, float novoValor){
+    // tenta inseri o valor ao item
+    if(item != NULL){
+        item->valor = novoValor;
+        return 1;
+    }
+    return 0;
+}
+
+void item_exibir_dados(Item *item){
+    // tenta exibir os dados do item
+    if(item != NULL){
+        printf("+-------------------+\n"
+               "|Codigo: %04i\n"
+               "|Nome:   %s\n"
+               "|Valor:  %.2f\n"
+               "+-------------------+\n",
+        item->codigo, item->nome, item->valor);
+        return;
+    }
+    printf("Erro: não foi possivel exibir os dados do item");
     return;
 }

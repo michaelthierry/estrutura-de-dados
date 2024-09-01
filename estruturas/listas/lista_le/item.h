@@ -33,4 +33,48 @@ Item* item_criar();
  */
 void item_excluir(Item *item);
 
+// INSERINDO DADOS EM UM ITEM
+/**
+ * @brief Insere valores em um novo item criado.
+ * 
+ * @param item 
+ * @return int 
+ */
+int item_inserir_dados(Item *item, int codigo, char *nome, float valor);
+
+/**
+ * @brief Inserir um valor inteiro no campo codigo do item
+ * 
+ * @param item referencia do item a ser modificado
+ * @param novoCodigo valor inteiro a ser atribido ao codigo
+ * @return int (1) para sucesso e (0) para falha
+ */
+int item_inserir_codigo(Item *item, int novoCodigo);
+
+/**
+ * @brief Inserir um string no campo nome do Item
+ * 
+ * @param item referencia do item a ser modificado.
+ * @param novoNome string a ser atribuida no nome.
+ * @return int (1) para sucesso (0) para falha.
+ */
+int item_inserir_nome(Item *item, char *novoNome);
+
+/**
+ * @brief Inserir um valor float ao campo valor
+ * 
+ * @param item referencia para o item a ser modificado
+ * @param novoValor valor flutuante a ser atribuido
+ * @return int (1) para o sucesso (0) para falha
+ */
+int item_inserir_valor(Item *item, float novoValor);
+
+// EXIBINDO UM ITEM
+/**
+ * @brief Exibe todas as informações do item passado
+ * 
+ * @param item referencia do item a ser exibido
+ */
+void item_exibir_dados(Item *item);
+
 #endif
