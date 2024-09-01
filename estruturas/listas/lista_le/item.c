@@ -39,6 +39,7 @@ void item_excluir(Item *item){
     return;
 }
 
+
 int item_inserir_dados(Item *item, int codigo, char *nome, float valor){
     // se o item nao for nulo
     if(item != NULL){
@@ -91,6 +92,31 @@ int item_inserir_valor(Item *item, float novoValor){
     }
     return 0;
 }
+
+int item_pegar_codigo(Item *item){
+    // caso nao seja nulo retorna o codigo
+    if(item != NULL){
+        return item->codigo;
+    }
+    return -1;
+}
+
+char* item_pegar_nome(Item *item){
+    // caso nao seja nulo retorna o nome
+    if(item != NULL){
+        return item->nome;
+    }
+    return NULL;
+}
+
+float item_pegar_valor(Item *item){
+    // caso nao seja nulo retorna o valor
+    if(item != NULL){
+        return item->valor;
+    }
+    return -1.0;
+}
+
 
 void item_exibir_dados(Item *item){
     // tenta exibir os dados do item

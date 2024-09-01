@@ -14,11 +14,12 @@
 
 void teste_criar_excluir_item();
 void teste_inserir_dados();
+void teste_pegar_dados();
 
 int main(){
     
-    teste_inserir_dados();
-
+    //teste_inserir_dados();
+    teste_pegar_dados();
     return 0;
 }
 
@@ -60,4 +61,20 @@ void teste_inserir_dados(){
 
     // excluido intem
     item_excluir(item);
+}
+
+void teste_pegar_dados(){
+    // criando item
+    Item *item = item_criar();
+    if(item != NULL){
+        printf("Item criado com sucesso!\n");
+    }
+    // inserindo dados
+    item_inserir_dados(item, 10, "Sabao", 10.0);
+    // pegando o codigo
+    printf("codigo: %d\n", item_pegar_codigo(item));
+    // pega o nome
+    printf("nome: %s\n", item_pegar_nome(item));
+    // pega o valor
+    printf("valor: %.2f\n", item_pegar_valor(item));
 }

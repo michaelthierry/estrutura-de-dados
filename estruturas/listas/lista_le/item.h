@@ -69,6 +69,32 @@ int item_inserir_nome(Item *item, char *novoNome);
  */
 int item_inserir_valor(Item *item, float novoValor);
 
+// PEGANDO DADOS DE UM ITEM
+
+/**
+ * @brief Pega o codigo de um item passado
+ * 
+ * @param item referencia para um item passado
+ * @return int >= 0 em caso de sucesso, < 0 se der falha
+ */
+int item_pegar_codigo(Item *item);
+
+/**
+ * @brief Pega o nome de um item passado
+ * 
+ * @param item referencia para um item passado.
+ * @return char* referencia para o nome do item, retorna NULL em caso de falha.
+ */
+char* item_pegar_nome(Item *item);
+
+/**
+ * @brief Pega o valor de um item passado.
+ * 
+ * @param item referencia do item passado.
+ * @return float (0.0) para erro, e > (0.0) para sucesso. 
+ */
+float item_pegar_valor(Item *item);
+
 // EXIBINDO UM ITEM
 /**
  * @brief Exibe todas as informações do item passado
