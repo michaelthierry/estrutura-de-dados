@@ -64,6 +64,9 @@ void teste_inserir_dados(){
 }
 
 void teste_pegar_dados(){
+    int codigo;
+    char *nome;
+    float valor;
     // criando item
     Item *item = item_criar();
     if(item != NULL){
@@ -77,4 +80,8 @@ void teste_pegar_dados(){
     printf("nome: %s\n", item_pegar_nome(item));
     // pega o valor
     printf("valor: %.2f\n", item_pegar_valor(item));
+    // pega todos os dados
+    item_pegar_dados(item, &codigo, &nome, &valor);
+    printf("cod:%d\nnom:%s\nval:%.2f\n", codigo, nome, valor);
+
 }

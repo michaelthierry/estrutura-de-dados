@@ -93,6 +93,7 @@ int item_inserir_valor(Item *item, float novoValor){
     return 0;
 }
 
+
 int item_pegar_codigo(Item *item){
     // caso nao seja nulo retorna o codigo
     if(item != NULL){
@@ -117,6 +118,16 @@ float item_pegar_valor(Item *item){
     return -1.0;
 }
 
+int item_pegar_dados(Item *item, int *codigo, char **nome, float *valor){
+    // caso nao seja nulo
+    if(item != NULL){
+        *codigo = item_pegar_codigo(item);
+        *nome = item_pegar_nome(item);
+        *valor = item_pegar_valor(item);
+        return 1;
+    }
+    return 0;
+}
 
 void item_exibir_dados(Item *item){
     // tenta exibir os dados do item

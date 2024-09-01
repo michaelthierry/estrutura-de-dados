@@ -95,6 +95,17 @@ char* item_pegar_nome(Item *item);
  */
 float item_pegar_valor(Item *item);
 
+/**
+ * @brief Pegar os dados de um item e coloca em uma referencia.
+ * 
+ * @param item referencia do item de onde se deseja acessar os dados.
+ * @param codigo referencia para onde o codigo será passado.
+ * @param nome refrencia para onde o nome é passado.
+ * @param valor referencia para onde o valor é passado.
+ * @return int (1) para sucesso (0) para falha
+ */
+int item_pegar_dados(Item *item, int *codigo, char **nome, float *valor);
+
 // EXIBINDO UM ITEM
 /**
  * @brief Exibe todas as informações do item passado
