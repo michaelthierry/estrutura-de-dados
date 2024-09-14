@@ -19,7 +19,8 @@ void teste_pegar_dados();
 int main(){
     
     //teste_inserir_dados();
-    teste_pegar_dados();
+    //teste_pegar_dados();
+    teste_inserir_dados();
     return 0;
 }
 

@@ -13,6 +13,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "item.h"
+#include "constantes.h"
 
 struct item {
     int codigo;
@@ -132,14 +133,19 @@ int item_pegar_dados(Item *item, int *codigo, char **nome, float *valor){
 void item_exibir_dados(Item *item){
     // tenta exibir os dados do item
     if(item != NULL){
-        printf("+-------------------+\n"
+        printf( BY
+               "+--------------------------+\n"
                "|Codigo: %04i\n"
+               "+--------------------------+\n"
                "|Nome:   %s\n"
                "|Valor:  %.2f\n"
-               "+-------------------+\n",
-        item->codigo, item->nome, item->valor);
+               "+--------------------------+\n"NONE,
+        item->codigo, 
+        item->nome, 
+        item->valor
+        );
         return;
     }
-    printf("Erro: não foi possivel exibir os dados do item");
+    printf(BR"Erro:"NONE" não foi possivel exibir os dados do item");
     return;
 }
