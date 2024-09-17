@@ -1,7 +1,7 @@
 # LISTA LINEAR ESTÁTICA
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)  
 
-##
-
+![Deploy](https://img.shields.io/badge/Deploy-v1.0.0-black.svg)
 ## Itens
 Para dar exemplo do funcionamento das listas criadas, para estrutura lista utilizaremos o elemento item. As listas armazenaram este elemento, como se fossem uma lista de itens de estoque de um supermercado.<br>
 
@@ -15,8 +15,6 @@ __Item__ : É uma estrutura que possuem três campos.<br>
 
 >`Valor`: valor de ponto flutuante com duas casas decimais após o ponto que representa o valor do unitário do item.
 
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)  
 
 ## Documentação de Item
 
