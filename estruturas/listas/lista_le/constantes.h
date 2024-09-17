@@ -9,6 +9,9 @@
  * 
  */
 
+/*Constantes */
+#define MAX 10
+
 // efeitos
 #define NONE    "\033[0m"
 #define BOLD    "\033[1m"
