@@ -2,5 +2,5 @@
 *.o
 # ignorando arquivos .exe
 *.exe
-# ignorando executavel de teste
-test
+# ignorando executavel de lista
+lista
