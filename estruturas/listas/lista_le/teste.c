@@ -11,18 +11,22 @@
 
 #include <stdio.h>
 #include "item.h"
-
+#include "lista.h"
+// Teste para o item
 void teste_criar_excluir_item();
 void teste_inserir_dados();
 void teste_pegar_dados();
+//Teste para a lista
+void teste_criar_excluir_lista();
 
 int main(){
     
     //teste_inserir_dados();
     //teste_pegar_dados();
-    
-    
     //teste_inserir_dados();
+
+    teste_criar_excluir_lista();
+
     return 0;
 }
 
@@ -87,4 +91,15 @@ void teste_pegar_dados(){
     item_pegar_dados(item, &codigo, &nome, &valor);
     printf("cod:%d\nnom:%s\nval:%.2f\n", codigo, nome, valor);
 
+}
+
+void teste_criar_excluir_lista(){
+    // criando a lista
+    Lista *lista = lista_criar();
+    // verifica se alocou lista
+    if(lista != NULL){
+        printf("Lista criada\n");
+    }
+    // excluir a lista
+    lista_liberar(lista);
 }
