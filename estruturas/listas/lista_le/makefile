@@ -8,7 +8,7 @@ F = \
 	-g \
 # Arquivos objetos
 OBJ = \
-	teste.o \
+	main.o \
 	lista.o \
 	item.o \
 
