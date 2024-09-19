@@ -15,7 +15,7 @@ OBJ = \
 # limpa a tela e executa o programa
 run: lista
 	clear
-	.lista
+	./lista
 
 # Regra para gerar executavel
 lista: $(OBJ)

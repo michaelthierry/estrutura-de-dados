@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "item.h"
 #include "lista.h"
+#include "constantes.h"
 // Teste para o item
 void teste_criar_excluir_item();
 void teste_inserir_dados();
@@ -20,10 +21,22 @@ void teste_pegar_dados();
 void teste_criar_excluir_lista();
 
 int main(){
-    
-    //teste_inserir_dados();
-    //teste_pegar_dados();
-    //teste_inserir_dados();
+    int opcao = 0;
+    do{
+        printf(
+        BY
+        " _    ___ ___ _____ _\n"   
+        "| |  |_ _/ __|_   _/_\\ \n"  
+        "| |__ | |\\__ \\ | |/ _ \\ \n" 
+        "|____|___|___/ |_/_/ \\_\\ \n"
+        "________________________\n"
+        "_____LINEAR ESTATICA____\n"
+        NONE
+        );
+
+        scanf("%d", &opcao);
+
+    }while(opcao != 0);
 
     teste_criar_excluir_lista();
 
