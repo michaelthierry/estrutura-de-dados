@@ -27,5 +27,6 @@
 // Amarelo em bold
 #define BY  BOLD YELLOW
 #define BR  BOLD RED
+#define BG  BOLD GREEN
 
 

@@ -20,27 +20,60 @@ void teste_pegar_dados();
 //Teste para a lista
 void teste_criar_excluir_lista();
 
-int main(){
-    int opcao = 0;
-    do{
-        printf(
-        BY
-        " _    ___ ___ _____ _\n"   
-        "| |  |_ _/ __|_   _/_\\ \n"  
-        "| |__ | |\\__ \\ | |/ _ \\ \n" 
-        "|____|___|___/ |_/_/ \\_\\ \n"
-        "________________________\n"
-        "_____LINEAR ESTATICA____\n"
-        NONE
-        );
+void interface_lista();
 
+int main(){
+    // variavei de opção
+    int opcao = 0;
+    // laço principal
+    do{
+        // exibindo cabeçalho
+        printf(
+            BY
+            "________________________\n"
+            " _    ___ ___ _____ _\n"   
+            "| |  |_ _/ __|_   _/_\\ \n"  
+            "| |__ | |\\__ \\ | |/ _ \\ \n" 
+            "|____|___|___/ |_/_/ \\_\\ \n"
+            "________________________\n"
+            "__LINEAR ESTATICA test__\n\n"
+            "+-----------------------+\n"
+            "|        MENU           |\n"
+            "+-----------------------+\n"
+            "| 1 | - CRIAR LISTA     |\n"
+            "| 0 | - SAIR            |\n"
+            "+-----------------------+\n\n"
+            BG
+            "@> Digite o número da sua opção\n"
+            NONE
+        );
+        // lendo opção do usuario 
         scanf("%d", &opcao);
+        switch(opcao){
+            case 1:
+                printf(BG"@> Criando a lista\n"NONE);
+                interface_lista();
+                break;
+            case 0:
+                printf(BG"@> Até mais!\n"NONE);
+                break;
+        }
 
     }while(opcao != 0);
 
-    teste_criar_excluir_lista();
-
     return 0;
+}
+
+void interface_lista(){
+    // criando a lista
+    Lista *lista = lista_criar();
+    // verifica se alocou lista
+    if(lista != NULL){
+        printf(BG"@> Lista criada\n"NONE);
+    }
+    // excluir a lista
+    lista_liberar(lista);
+    printf(BG"@> Lista liberada\n"NONE);
 }
 
 void teste_criar_excluir_item(){
@@ -107,12 +140,22 @@ void teste_pegar_dados(){
 }
 
 void teste_criar_excluir_lista(){
+    // variavel de opção
+    int opcao;
     // criando a lista
     Lista *lista = lista_criar();
     // verifica se alocou lista
     if(lista != NULL){
         printf("Lista criada\n");
     }
+
+    do{
+        
+        printf("Opt\n");
+        scanf("%d", opcao);
+
+    }while(opcao != 0);
+
     // excluir a lista
     lista_liberar(lista);
 }
