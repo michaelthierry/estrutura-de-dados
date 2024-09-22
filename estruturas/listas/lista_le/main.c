@@ -20,12 +20,21 @@ void teste_pegar_dados();
 //Teste para a lista
 void teste_criar_excluir_lista();
 
+int menu_principal();
 void interface_lista();
+int sair_opcao_lista();
 
 int main(){
-    // variavei de opção
+    // chamada do principal
+    menu_principal();
+    // retorna 
+    return 0;
+}
+
+int menu_principal(){
+    // variavel de controle
     int opcao = 0;
-    // laço principal
+    // laço do menu principal
     do{
         // exibindo cabeçalho
         printf(
@@ -36,7 +45,8 @@ int main(){
             "| |__ | |\\__ \\ | |/ _ \\ \n" 
             "|____|___|___/ |_/_/ \\_\\ \n"
             "________________________\n"
-            "__LINEAR ESTATICA test__\n\n"
+            "  LINEAR ESTATICA TEST  \n"
+            "⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻\n"
             "+-----------------------+\n"
             "|        MENU           |\n"
             "+-----------------------+\n"
@@ -44,23 +54,24 @@ int main(){
             "| 0 | - SAIR            |\n"
             "+-----------------------+\n\n"
             BG
-            "@> Digite o número da sua opção\n"
+            "@> Digite o número da sua opção:"
             NONE
         );
         // lendo opção do usuario 
         scanf("%d", &opcao);
         switch(opcao){
             case 1:
-                printf(BG"@> Criando a lista\n"NONE);
+                printf(BG"@> Criando a lista...\n"NONE);
                 interface_lista();
                 break;
             case 0:
                 printf(BG"@> Até mais!\n"NONE);
                 break;
+            default:
+                printf(BR"@> Opcao Invalida, digite novamente!\n"NONE);
         }
 
     }while(opcao != 0);
-
     return 0;
 }
 
@@ -69,12 +80,81 @@ void interface_lista(){
     Lista *lista = lista_criar();
     // verifica se alocou lista
     if(lista != NULL){
-        printf(BG"@> Lista criada\n"NONE);
+        // varivel de opcao
+        int opcao = 0;
+        // mensagem de lista criada
+        printf(BG"@> Lista criada!\n"NONE);
+        // menu das funções da lista
+        do{
+            printf(BY
+                "+---------------------------+\n"
+                "|       OPCOES DA LISTA     |\n"
+                "+---------------------------+\n"
+                "|1|-INSERIR UM ITEM NA LISTA|\n"
+                "|2|-REMOVER UM ITEM DA LISTA|\n"
+                "|3|-EXIBIR ITEM DA LISTA    |\n"
+                "|4|-BUSCAR ITEM DA LISTA    |\n"
+                "|0|-VOLTAR                  |\n"
+                "+---------------------------+\n"
+                BG
+                "@> Digite o numero da sua opcao:"
+                NONE
+            );
+            scanf("%d", &opcao);
+            switch(opcao){
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 0:
+                    opcao = sair_opcao_lista();
+                    break;
+                default:
+                    printf(BR"@> Opcao invalida!\n"NONE);
+            }
+        }while(opcao != 0);
+    }else{
+        printf(BR"@> Erro ao criar a lista!\n"NONE);
     }
     // excluir a lista
     lista_liberar(lista);
-    printf(BG"@> Lista liberada\n"NONE);
+    printf(BG"@> Lista liberada!\n"NONE);
 }
+
+int sair_opcao_lista(){
+    // opcao uma lista
+    int opcao = 0;
+    do{
+        printf(
+            BY
+            "+--------------------------------------+\n"
+            "| UMA LISTA FOI CRIADA, DESEJA LIBERAR?|\n"
+            "+--------------------------------------+\n"
+            "|1|-NAO                                |\n"
+            "|0|-SIM                                |\n"
+            "+--------------------------------------+\n"
+            BG
+            "@> Digite o numero da sua opção:"
+            NONE
+        );
+        scanf("%d", &opcao);
+        switch(opcao){
+            case 0:
+                return 0;
+            case 1:
+                return 1;
+            default:
+                printf("@> Opcao invalida, digite novamente!\n");
+        }
+
+    }while(opcao = 0);
+    
+}
+
 
 void teste_criar_excluir_item(){
     // criando item
