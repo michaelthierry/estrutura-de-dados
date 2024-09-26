@@ -13,8 +13,12 @@
 #define MAX 10
 
 // efeitos
-#define NONE    "\033[0m"
-#define BOLD    "\033[1m"
+#define NONE        "\033[0m"
+#define BOLD        "\033[1m"
+#define HALF        "\033[2m"
+#define UNDERSCORE  "\033[4m"
+#define BLINK       "\033[5m"
+#define REVERSE     "\033[7m"
 
 
 // cores
@@ -29,4 +33,7 @@
 #define BR  BOLD RED
 #define BG  BOLD GREEN
 
+// especial efeitos
+#define BYR BY REVERSE
+#define Z "\\"
 
