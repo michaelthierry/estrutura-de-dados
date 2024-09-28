@@ -56,4 +56,12 @@ int lista_cheia(Lista *lista);
  */
 int lista_vazia(Lista *lista);
 
+/**
+ * @brief Essa funcão verifica o tamanho da lista, isto é a quantidade de elementos nela.
+ * 
+ * @param lista referencia para a lista
+ * @return int -1 se a lista não existe, valor <= 0 que corresponde o tamanho da lista
+ */
+int lista_tamanho(Lista *lista);
+
 #endif

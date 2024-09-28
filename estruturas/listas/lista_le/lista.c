@@ -66,3 +66,13 @@ int lista_vazia(Lista *lista){
     // caso contrario
     return -1;
 }
+
+int lista_tamanho(Lista *lista){
+    // se a lista existir
+    if(lista_existe(lista)){
+        // retorna o tamanho da lista
+        return lista->quantidade;
+    }
+    // caso contrario
+    return -1;
+}
