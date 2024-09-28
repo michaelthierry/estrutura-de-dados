@@ -46,3 +46,13 @@ int lista_existe(Lista *lista){
     // caso contrario retorna
     return 1;
 }
+
+int lista_cheia(Lista *lista){
+    // se a lista existe
+    if(lista_existe(lista)){
+        // verifica se a lista esta cheia
+        return (lista->quantidade == MAX);
+    }
+    // caso contrario
+    return -1;
+}

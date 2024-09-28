@@ -40,5 +40,6 @@ void lista_liberar(Lista *lista);
  */
 int lista_existe(Lista *lista);
 
+int lista_cheia(Lista *lista);
 
 #endif
