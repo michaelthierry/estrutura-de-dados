@@ -31,9 +31,16 @@ void menu_alterar_item();
 
 void menu_inserir();
 
+// Função principal
 int main(){
     // chamada do principal
-    menu_inicial();
+    //menu_inicial();
+    int status;
+    Lista *lista = lista_criar();
+    lista = NULL;
+    status = lista_existe(lista);
+    printf("Status:%d\n", status);
+
     // retorna 
     return 0;
 }
@@ -45,10 +52,10 @@ void menus(int tipo){
     printf(
         BY
         " __________________________________________________________________________\n"
-        "|                       _    ___ ___ _____ _                               |\n"
-        "|                      | |  |_ _/ __|_   _/_\\                              |\n"
-        "|                      | |__ | |\\__ \\ | |/ _ \\                             |\n"
-        "|                      |____|___|___/ |_/_/ \\_\\                            |\n"
+        "|               _    ___ ___ _____ _                                       |\n"
+        "|              | |  |_ _/ __|_   _/_\\         +---+---+---+---+---+        |\n"
+        "|              | |__ | |\\__ \\ | |/ _ \\        |   |   |   |   |   |        |\n"
+        "|              |____|___|___/ |_/_/ \\_\\       +---+---+---+---+---+        |\n"
         "|__________________________________________________________________________|\n"
         "| Version:V1.0.0         LINEAR ESTATICA TESTE      @autor:michael thierry |\n"
         "|⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻⁻|\n"

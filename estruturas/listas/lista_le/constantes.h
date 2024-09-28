@@ -9,7 +9,7 @@
  * 
  */
 
-/*Constantes */
+/*Tamanho maximo da lista*/
 #define MAX 10
 
 // efeitos

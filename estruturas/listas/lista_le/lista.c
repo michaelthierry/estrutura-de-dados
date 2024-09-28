@@ -37,3 +37,12 @@ void lista_liberar(Lista *lista){
     // libera alocação da lista
     free(lista);
 }
+
+int lista_existe(Lista *lista){
+    // verifica se a lista existe
+    if(lista == NULL){
+        return 0;
+    }
+    // caso contrario retorna
+    return 1;
+}

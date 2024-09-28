@@ -31,4 +31,14 @@ Lista* lista_criar();
  */
 void lista_liberar(Lista *lista);
 
+// PEGANDO INFORMAÇÕES DA LISTA
+/**
+ * @brief Essa função verifica se alista passada com argumento realmente foi alocada,
+ * ou seja, não é nula.
+ * @param lista referencia para a lista
+ * @return int 0 para lista nulas e 1 para lista existentes.
+ */
+int lista_existe(Lista *lista);
+
+
 #endif
