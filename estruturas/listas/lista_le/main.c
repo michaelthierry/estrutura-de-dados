@@ -37,9 +37,9 @@ int main(){
     //menu_inicial();
     int status;
     Lista *lista = lista_criar(); 
-    lista = NULL;
     //status = lista_existe(lista);
-    status = lista_cheia(lista);
+    //status = lista_cheia(lista);
+    status = lista_vazia(lista);
     printf("Status:%d\n", status);
 
     // retorna 

@@ -40,6 +40,20 @@ void lista_liberar(Lista *lista);
  */
 int lista_existe(Lista *lista);
 
+/**
+ * @brief Essa função verifica se a lista esta cheia.
+ * 
+ * @param lista referencia da lista
+ * @return int -1 se a lista não existe, 0 se a lista não esta cheia e 1 se a lista não esta cheia 
+ */
 int lista_cheia(Lista *lista);
+
+/**
+ * @brief Essa função verifica se a lista passada esta vazia
+ * 
+ * @param lista referencia para lista
+ * @return int -1 se a lista não existir, 0 se a lista não esta vazia 1 se lista esta vazia.
+ */
+int lista_vazia(Lista *lista);
 
 #endif

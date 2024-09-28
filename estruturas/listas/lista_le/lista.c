@@ -56,3 +56,13 @@ int lista_cheia(Lista *lista){
     // caso contrario
     return -1;
 }
+
+int lista_vazia(Lista *lista){  
+    // se a lista existe
+    if(lista_existe(lista)){
+        // verifica se esta fazia
+        return (lista->quantidade == 0);
+    }
+    // caso contrario
+    return -1;
+}
